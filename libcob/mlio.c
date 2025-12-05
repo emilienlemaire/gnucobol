@@ -17,6 +17,7 @@
    You should have received a copy of the GNU Lesser General Public License
    along with GnuCOBOL.  If not, see <https://www.gnu.org/licenses/>.
 */
+#define WITH_XML2
 
 #include "config.h"
 
@@ -2358,7 +2359,7 @@ xml_process_next_event (struct xml_state *state)
 	if (state->last_xml_code) {
 		set_xml_code (state->last_xml_code);
 	} else {
-	set_xml_code (0);
+		set_xml_code (0);
 	}
 
 	if (ntext) {
